@@ -1,0 +1,1002 @@
+{
+    "resolution": {
+        "x": 1920,
+        "y": 1080,
+        "comment": "Set to your screen resolution e.g., 1920x1080"
+    },
+    "poeninja": {
+        "league": {
+            "name": "Keepers",
+            "comment": "Name of relevant trade league for fetching scarab prices from poe ninja."
+        },
+        "scarab": {
+            "chaos_value": 3,
+            "comment": "Threshhold of how much chaos a scarab needs to be worth for the scarab_get_valuable script."
+        }
+    },
+    "delay": {
+        "value": 30,
+        "comment": "Default delay after each action. This should roughly be ping + 20 in ms."
+    },
+    "log": {
+        "level": "DEBUG",
+        "comment": "Possible levels: DEBUG, INFO, WARN, ERROR."
+    },
+    "maps": {
+        "mods": {
+            "avoid": [
+                "cannot leech",
+                "% to all maximum Resistances",
+                "fiend"
+            ],
+            "rarity": null,
+            "quantity": null,
+            "packsize": null,
+            "currency": 139,
+            "scarabs": 139,
+            "maps": 139,
+            "sum_currency_scarab": 139,
+            "sum_currency_scarab_map": 199
+        },
+        "comment": "Use the fields to specify the min value for any given modifier and which mods to avoid. The script will stop if 1 of them and avoid is fullfilled. Set to None to ignore a specific filter."
+    },
+    "items": {
+        "name": {
+            "desired": {
+                "group1": [
+                    "Merciless",
+                    "Flaring",
+                    "Dictator's",
+                    "of Exsanguinating"
+                ],
+                "group2": []
+            },
+            "comment": "Specify desired item prefix/suffix names for alteration spam. The script will stop if it finds at least 1 match from each group. Leave groups empty to ignore them."
+        },
+        "mods": {
+            "desired": {
+                "group1": [
+                    {
+                        "pattern": "(\\d+)% increased Physical Damage",
+                        "min_value": 155,
+                        "max_value": null,
+                        "ignore": true,
+                        "comment": "Example for: (170-179)% increased Physical Damage"
+                    },
+                    {
+                        "pattern": "to (\\d+) Physical Damage",
+                        "max_value": null,
+                        "ignore": true,
+                        "comment": "Example for: Adds (34-47) to (72-84) Physical Damage"
+                    },
+                    {
+                        "pattern": "(\\d+)% increased Physical Damage.*to Accuracy Rating",
+                        "min_value": 65,
+                        "max_value": 79,
+                        "ignore": true,
+                        "comment": "Example for: (75-79)% increased Physical Damage\n+(175-200) to Accuracy Rating"
+                    },
+                    {
+                        "pattern": "(\\d+)% to Physical Damage over Time Multiplier",
+                        "min_value": 1,
+                        "max_value": null,
+                        "ignore": false
+                    }
+                ],
+                "group2": [
+                    {
+                        "pattern": "to (\\d+) Fire Damage",
+                        "min_value": 72,
+                        "max_value": null,
+                        "ignore": true,
+                        "comment": "Example for: Adds (34-47) to (72-84) Fire Damage"
+                    }
+                ],
+                "group3": []
+            },
+            "comment": "Specify desired item mods here. The pattern needs to be a proper regex for the desired mod (copy from poetrade). The script will stop if it finds an item with at least 1 mod from each group. Leave groups empty to ignore them."
+        }
+    },
+    "stashtab": {
+        "currency": {
+            "craft": {
+                "x": 333,
+                "y": 455,
+                "anchor": "left"
+            },
+            "chaos": {
+                "x": 550,
+                "y": 275,
+                "anchor": "left"
+            },
+            "alteration": {
+                "x": 110,
+                "y": 275,
+                "anchor": "left"
+            },
+            "augmentation": {
+                "x": 225,
+                "y": 335,
+                "anchor": "left"
+            },
+            "alchemy": {
+                "x": 490,
+                "y": 275,
+                "anchor": "left"
+            },
+            "scour": {
+                "x": 435,
+                "y": 515,
+                "anchor": "left"
+            },
+            "chance": {
+                "x": 0,
+                "y": 0,
+                "anchor": "left"
+            }
+        },
+        "fragment": {
+            "scarab": {
+                "Breach Scarab of Lordship": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ultimatum Scarab of Catalysing": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Preservation": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ambush Scarab of Containment": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Pandemonium": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Awakening": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Bloodlines": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Breach Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Domination Scarab of Terrors": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Blight Scarab of Invigoration": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Cartography Scarab of Risk": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harvest Scarab of Cornucopia": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harvest Scarab of Doubling": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Essence Scarab of Calcification": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Nemeses": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Blight Scarab of Blooming": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Incursion Scarab of Timelines": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Glittering": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Divination Scarab of Pilfering": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Divination Scarab of The Cloister": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Legion Scarab of Eternal Conflict": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ambush Scarab of Discernment": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Delirium Scarab of Paranoia": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harbinger Scarab of Regency": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ritual Scarab of Abundance": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harbinger Scarab of Warhoards": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ultimatum Scarab of Dueling": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Abyss Scarab of Profound Depth": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Kalguuran Scarab of Refinement": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Horned Scarab of Tradition": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Essence Scarab of Adaptation": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Monstrous Lineage": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Cartography Scarab of Corruption": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Bestiary Scarab of Duplicating": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ultimatum Scarab of Bribing": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Essence Scarab of Ascent": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ultimatum Scarab of Inscription": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Wisps": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Radiant Storms": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Divination Scarab of Plenty": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Influencing Scarab of Conversion": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ritual Scarab of Selectiveness": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Legion Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ambush Scarab of Potency": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harbinger Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Delirium Scarab of Mania": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Bestiary Scarab of the Herd": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ambush Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab of Gigantification": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Abyss Scarab of Multitudes": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Beyond Scarab of the Invasion": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ambush Scarab of Hidden Compartments": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Abyss Scarab of Edifice": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Influencing Scarab of Hordes": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Expedition Scarab of Runefinding": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Delirium Scarab of Delusions": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Betrayal Scarab of Reinforcements": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Incursion Scarab of Champions": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Expedition Scarab of Archaeology": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Beyond Scarab of Resurgence": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Stability": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Legion Scarab of Officers": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Cartography Scarab of the Multitude": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ritual Scarab of Wisps": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Blight Scarab of the Blightheart": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Cartography Scarab of Escalation": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harbinger Scarab of Obelisks": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Domination Scarab of Apparitions": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Domination Scarab of Evolution": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Titanic Scarab of Legend": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Titanic Scarab of Treasures": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Bisection": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Kalguuran Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Kalguuran Scarab of Guarded Riches": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Essence Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Sulphite Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Essence Scarab of Stability": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Delirium Scarab of Neuroses": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Torment Scarab of Peculiarity": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Harvest Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Expedition Scarab of Verisium Powder": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Beyond Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Incursion Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Legion Scarab of Command": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Blight Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Incursion Scarab of Invasion": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Ultimatum Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Adversaries": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Sulphite Scarab of Fumes": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Abyss Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Delirium Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Torment Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Influencing Scarab of the Shaper": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Bestiary Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Expedition Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Betrayal Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Domination Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Influencing Scarab of the Elder": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Hunted Traitors": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Beyond Scarab of Haemophilia": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab of Partnership": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Torment Scarab of Possession": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Scarab of Divinity": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Titanic Scarab": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                },
+                "Betrayal Scarab of the Allflame": {
+                    "x": 0,
+                    "y": 0,
+                    "anchor": "left"
+                }
+            }
+        }
+    },
+    "npc": {
+        "lillyroth": {
+            "div": {
+                "turnin": {
+                    "x": 625,
+                    "y": 740,
+                    "anchor": "center",
+                    "comment": "Div card turn-in button coordinates."
+                },
+                "reward": {
+                    "x": 625,
+                    "y": 450,
+                    "anchor": "center",
+                    "comment": "Div card reward window coordinates."
+                }
+            }
+        }
+    },
+    "character": {
+        "inventory": {
+            "comment": "Inventory slot coordinates. Reserved slots will not be considered. Slots are numbered from 1 to 60, top to bottom, left to right. Exactly like in-game.",
+            "reserved": [
+                "4",
+                "5"
+            ],
+            "slots": {
+                "1": {
+                    "x": 1295,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "2": {
+                    "x": 1295,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "3": {
+                    "x": 1295,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "4": {
+                    "x": 1295,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "5": {
+                    "x": 1295,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "6": {
+                    "x": 1347,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "7": {
+                    "x": 1347,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "8": {
+                    "x": 1347,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "9": {
+                    "x": 1347,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "10": {
+                    "x": 1347,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "11": {
+                    "x": 1399,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "12": {
+                    "x": 1399,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "13": {
+                    "x": 1399,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "14": {
+                    "x": 1399,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "15": {
+                    "x": 1399,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "16": {
+                    "x": 1451,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "17": {
+                    "x": 1451,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "18": {
+                    "x": 1451,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "19": {
+                    "x": 1451,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "20": {
+                    "x": 1451,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "21": {
+                    "x": 1503,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "22": {
+                    "x": 1503,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "23": {
+                    "x": 1503,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "24": {
+                    "x": 1503,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "25": {
+                    "x": 1503,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "26": {
+                    "x": 1555,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "27": {
+                    "x": 1555,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "28": {
+                    "x": 1555,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "29": {
+                    "x": 1555,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "30": {
+                    "x": 1555,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "31": {
+                    "x": 1607,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "32": {
+                    "x": 1607,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "33": {
+                    "x": 1607,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "34": {
+                    "x": 1607,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "35": {
+                    "x": 1607,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "36": {
+                    "x": 1659,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "37": {
+                    "x": 1659,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "38": {
+                    "x": 1659,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "39": {
+                    "x": 1659,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "40": {
+                    "x": 1659,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "41": {
+                    "x": 1711,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "42": {
+                    "x": 1711,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "43": {
+                    "x": 1711,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "44": {
+                    "x": 1711,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "45": {
+                    "x": 1711,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "46": {
+                    "x": 1763,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "47": {
+                    "x": 1763,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "48": {
+                    "x": 1763,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "49": {
+                    "x": 1763,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "50": {
+                    "x": 1763,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "51": {
+                    "x": 1815,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "52": {
+                    "x": 1815,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "53": {
+                    "x": 1815,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "54": {
+                    "x": 1815,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "55": {
+                    "x": 1815,
+                    "y": 823,
+                    "anchor": "right"
+                },
+                "56": {
+                    "x": 1867,
+                    "y": 615,
+                    "anchor": "right"
+                },
+                "57": {
+                    "x": 1867,
+                    "y": 667,
+                    "anchor": "right"
+                },
+                "58": {
+                    "x": 1867,
+                    "y": 719,
+                    "anchor": "right"
+                },
+                "59": {
+                    "x": 1867,
+                    "y": 771,
+                    "anchor": "right"
+                },
+                "60": {
+                    "x": 1867,
+                    "y": 823,
+                    "anchor": "right"
+                }
+            }
+        }
+    }
+}
