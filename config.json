@@ -692,8 +692,8 @@
         "inventory": {
             "comment": "Inventory slot coordinates. Reserved slots will not be considered. Slots are numbered from 1 to 60, top to bottom, left to right. Exactly like in-game.",
             "reserved": [
-                "4",
-                "5"
+                4,
+                5
             ],
             "slots": {
                 "1": {

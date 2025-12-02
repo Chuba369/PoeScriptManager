@@ -36,4 +36,4 @@ This is a python programm that runs a gui to start and stop different scripts fo
 3. install development dependencies
 - *pip install -r dev-requirements.txt*
 4. build the .exe
-- *pyinstaller --onefile --add-data "config.json;." --add-data "scripts;scripts" main.py --name PoeScriptManager*
+- *pyinstaller --onefile main.py --name PoeScriptManager*

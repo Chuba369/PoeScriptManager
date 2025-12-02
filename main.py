@@ -2,6 +2,13 @@ from gui import PoEGui
 import config
 import logger
 
+# needed for building .exe
+import pyautogui
+import winsound
+import keyboard
+import utils
+import requests
+
 class MainApp:
     def __init__(self):
         logger.info("Starting PoE Script Manager")

@@ -16,7 +16,7 @@ def start():
     global running
     running = True
 
-    pyautogui.PAUSE = config.get_config_element("delay.value") / 1000
+    pyautogui.PAUSE = 3 * config.get_config_element("delay.value") / 1000
 
     chaos_value = config.get_config_element("poeninja.scarab.chaos_value")
 

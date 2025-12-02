@@ -11,7 +11,7 @@ class PoEGui:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("PoE Script Manager")
-        self.root.geometry("1600x900")
+        self.root.geometry("1366x768")
 
         self._setup_frames()
         self._setup_control_scripts()

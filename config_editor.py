@@ -39,7 +39,7 @@ class ConfigEditor:
         self.window = tk.Toplevel(master)
         self.window.title("Config Editor")
 
-        self.window.geometry("1600x900")
+        self.window.geometry("1366x768")
         self.window.resizable(True, True)
 
         self.entries = {}
@@ -53,11 +53,11 @@ class ConfigEditor:
             
             value = self.get_nested_value(field_path, self.config_data)
 
-            # if the field is a list, format it with double quotes
+            # if the field is a list, format it with double quotes for strings only
             if self.editable_fields[field_path] == list and isinstance(value, list):
-                value = "[" + ", ".join(f'"{s}"' for s in value) + "]"
+                value = "[" + ", ".join(f'"{s}"' if isinstance(s, str) else str(s) for s in value) + "]"
 
-            entry = tk.Entry(self.window, width=90)  
+            entry = tk.Entry(self.window, width=150)  
             entry.insert(0, str(value))
             entry.grid(row=row, column=1, padx=5, pady=5)
             self.entries[field_path] = entry
