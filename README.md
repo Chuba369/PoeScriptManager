@@ -17,7 +17,7 @@ This is a python programm that runs a gui to start and stop different scripts fo
 - **map_t17_bulk**: This script will loop over your inventory (except for the configured reserved slots) and roll your t17 maps. Rules are identical to map_t17_single
 - **map_t165_single**: This script will scour alch spam the map in your currency stash crafting window until at least 1 of the configured modifiers is fullfilled and there are no mods to avoid
 - **map_t165_bulk**: This script will loop over your inventory (except for the configured reserved slots) and roll your t165 maps. Rules are identical to map_t165_single
-- **scarab_get_valuable**: This script will go over the fragment-scarab tab and grab all valuable scarabs until your inventory is full or everything is processed. Exact value threshhold can be configured.
+- **scarab_get_valuable**: This script will go over the fragment-scarab tab and grab all valuable scarabs until your inventory is full or everything is processed. Exact value threshhold in chaos can be configured.
 
 ## Installation
 ### User
