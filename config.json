@@ -137,6 +137,62 @@
         },
         "fragment": {
             "scarab": {
+                "Titanic Scarab": {
+                    "x": 152,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Titanic Scarab of Treasures": {
+                    "x": 191,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Titanic Scarab of Legend": {
+                    "x": 230,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Sulphite Scarab": {
+                    "x": 290,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Sulphite Scarab of Fumes": {
+                    "x": 329,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Divination Scarab of The Cloister": {
+                    "x": 427,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Divination Scarab of Plenty": {
+                    "x": 466,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Divination Scarab of Pilfering": {
+                    "x": 505,
+                    "y": 203,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab": {
+                    "x": 88,
+                    "y": 246,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab of Gigantification": {
+                    "x": 127,
+                    "y": 246,
+                    "anchor": "left"
+                },
+                "Anarchy Scarab of Partnership": {
+                    "x": 166,
+                    "y": 246,
+                    "anchor": "left"
+                },
+
                 "Breach Scarab of Lordship": {
                     "x": 50,
                     "y": 50,
@@ -223,16 +279,6 @@
                     "anchor": "left"
                 },
                 "Horned Scarab of Glittering": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Divination Scarab of Pilfering": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Divination Scarab of The Cloister": {
                     "x": 0,
                     "y": 0,
                     "anchor": "left"
@@ -332,11 +378,6 @@
                     "y": 0,
                     "anchor": "left"
                 },
-                "Divination Scarab of Plenty": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
                 "Influencing Scarab of Conversion": {
                     "x": 0,
                     "y": 0,
@@ -373,11 +414,6 @@
                     "anchor": "left"
                 },
                 "Ambush Scarab": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Anarchy Scarab of Gigantification": {
                     "x": 0,
                     "y": 0,
                     "anchor": "left"
@@ -482,16 +518,6 @@
                     "y": 0,
                     "anchor": "left"
                 },
-                "Titanic Scarab of Legend": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Titanic Scarab of Treasures": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
                 "Scarab of Bisection": {
                     "x": 0,
                     "y": 0,
@@ -507,17 +533,7 @@
                     "y": 0,
                     "anchor": "left"
                 },
-                "Anarchy Scarab": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
                 "Essence Scarab": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Sulphite Scarab": {
                     "x": 0,
                     "y": 0,
                     "anchor": "left"
@@ -582,11 +598,6 @@
                     "y": 0,
                     "anchor": "left"
                 },
-                "Sulphite Scarab of Fumes": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
                 "Abyss Scarab": {
                     "x": 0,
                     "y": 0,
@@ -642,22 +653,12 @@
                     "y": 0,
                     "anchor": "left"
                 },
-                "Anarchy Scarab of Partnership": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
                 "Torment Scarab of Possession": {
                     "x": 0,
                     "y": 0,
                     "anchor": "left"
                 },
                 "Scarab of Divinity": {
-                    "x": 0,
-                    "y": 0,
-                    "anchor": "left"
-                },
-                "Titanic Scarab": {
                     "x": 0,
                     "y": 0,
                     "anchor": "left"
