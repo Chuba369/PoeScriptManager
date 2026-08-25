@@ -15,7 +15,7 @@
         }
     },
     "delay": {
-        "value": 30,
+        "value": 85,
         "comment": "Default delay after each action. This should roughly be ping + 20 in ms."
     },
     "log": {
@@ -24,19 +24,15 @@
     },
     "maps": {
         "mods": {
-            "avoid": [
-                "cannot leech",
-                "% to all maximum Resistances",
-                "fiend"
-            ],
+            "avoid": [],
             "rarity": null,
             "quantity": null,
             "packsize": null,
-            "currency": 139,
-            "scarabs": 139,
-            "maps": 139,
-            "sum_currency_scarab": 139,
-            "sum_currency_scarab_map": 199
+            "currency": null,
+            "scarabs": 70,
+            "maps": null,
+            "sum_currency_scarab": null,
+            "sum_currency_scarab_map": null
         },
         "comment": "Use the fields to specify the min value for any given modifier and which mods to avoid. The script will stop if 1 of them and avoid is fullfilled. Set to None to ignore a specific filter."
     },
@@ -44,10 +40,8 @@
         "name": {
             "desired": {
                 "group1": [
-                    "Merciless",
-                    "Flaring",
-                    "Dictator's",
-                    "of Exsanguinating"
+                    "Exalter's",
+                    "Rimedweller's"
                 ],
                 "group2": []
             },
@@ -79,6 +73,30 @@
                     {
                         "pattern": "(\\d+)% to Physical Damage over Time Multiplier",
                         "min_value": 1,
+                        "max_value": null,
+                        "ignore": true
+                    },
+                    {
+                        "pattern": "Unholy Grace",
+                        "min_value": null,
+                        "max_value": null,
+                        "ignore": true
+                    },
+                    {
+                        "pattern": "Overwhelming Malice",
+                        "min_value": null,
+                        "max_value": null,
+                        "ignore": true
+                    },
+                    {
+                        "pattern": "Dark Ideation",
+                        "min_value": null,
+                        "max_value": null,
+                        "ignore": true
+                    },
+                    {
+                        "pattern": "Unspeakable Gifts",
+                        "min_value": null,
                         "max_value": null,
                         "ignore": false
                     }
@@ -126,12 +144,17 @@
             },
             "scour": {
                 "x": 435,
-                "y": 515,
+                "y": 400,
                 "anchor": "left"
             },
             "chance": {
                 "x": 0,
                 "y": 0,
+                "anchor": "left"
+            },
+            "exalt": {
+                "x": 300,
+                "y": 280,
                 "anchor": "left"
             }
         },
@@ -192,7 +215,6 @@
                     "y": 246,
                     "anchor": "left"
                 },
-
                 "Breach Scarab of Lordship": {
                     "x": 50,
                     "y": 50,
@@ -693,8 +715,8 @@
         "inventory": {
             "comment": "Inventory slot coordinates. Reserved slots will not be considered. Slots are numbered from 1 to 60, top to bottom, left to right. Exactly like in-game.",
             "reserved": [
-                4,
-                5
+                5,
+                10
             ],
             "slots": {
                 "1": {
